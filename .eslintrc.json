@@ -23,6 +23,7 @@
     // gives warning if spread props getting passed to component ex. (...props)
     "react/jsx-props-no-spreading": ["off"],
     // suppress errors for Function component is not a function declaration turning off allows us to use arrow functions
-    "react/function-component-definition": ["off"]
+    "react/function-component-definition": ["off"],
+    "@next/next/no-img-element": "off"
   }
 }
