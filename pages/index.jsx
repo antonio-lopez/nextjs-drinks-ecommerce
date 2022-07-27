@@ -1,4 +1,11 @@
-import { Navbar, Hero, BeerProduct, CoffeeProduct, Blog } from '../components';
+import {
+  Navbar,
+  Hero,
+  BeerProduct,
+  CoffeeProduct,
+  Blog,
+  Footer,
+} from '../components';
 
 export default function Home() {
   return (
@@ -8,6 +15,7 @@ export default function Home() {
       <BeerProduct />
       <CoffeeProduct />
       <Blog />
+      <Footer />
     </>
   );
 }
