@@ -1,4 +1,4 @@
-import { Navbar, Hero, BeerProduct, CoffeeProduct } from '../components';
+import { Navbar, Hero, BeerProduct, CoffeeProduct, Blog } from '../components';
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
       <Hero />
       <BeerProduct />
       <CoffeeProduct />
+      <Blog />
     </>
   );
 }
