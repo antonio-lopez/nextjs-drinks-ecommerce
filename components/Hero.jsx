@@ -1,13 +1,13 @@
 const Hero = () => {
   return (
     <section className="mx-auto min-h-screen max-w-7xl">
-      <div className="grid grid-cols-1 gap-y-8 px-4 pt-32 text-white">
-        <h1 className="text-2xl font-bold">
+      <div className="grid grid-cols-1 gap-y-8 px-4 pt-32 text-white sm:gap-y-28 sm:px-8">
+        <h1 className="text-2xl font-bold sm:text-5xl">
           Modern Times is an intrepid cadre of brewers, coffee roasters,
           culinary wizards, creative powerhouses, and beer-slingers.
         </h1>
         <div>
-          <p className="mb-10 text-sm">
+          <p className="mb-10 text-sm sm:text-lg">
             It that began as a 30bbl production brewery and tasting room in the
             Point Loma neighborhood of San Diego in 2013. Today, we&apos;re
             distributed throughout California, Arizona, Colorado, Nevada, Utah,

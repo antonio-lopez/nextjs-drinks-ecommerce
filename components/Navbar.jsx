@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className="mx-auto max-w-7xl">
       {/* mobile container */}
-      <div className="flex justify-between p-4">
+      <div className="flex justify-between p-4 sm:p-8">
         <Link href="/" passHref>
           <a href="home">
             <img
