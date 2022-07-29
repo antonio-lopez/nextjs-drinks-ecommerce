@@ -1,43 +1,22 @@
 import { AiOutlineArrowRight } from 'react-icons/ai';
+import { beerProduct } from '../data';
 
 const BeerProduct = () => {
   return (
     <section className="mx-auto max-w-7xl px-4 text-white sm:px-8">
       <h1 className="mb-6 text-2xl font-bold sm:text-4xl">Our Beer</h1>
       <div className="grid grid-cols-1 place-items-center sm:grid-cols-3">
-        {/* sample 1 */}
-        <div className="p-5">
-          <img
-            src="images/beer/sm/FortunateIslands4Pack_480x.webp"
-            alt="beer product"
-          />
-          <div className="mt-4">
-            <h1 className="text-lg">Fortunate Islands</h1>
-            <span className="text-sm opacity-70">Pale Ale</span>
-          </div>
-        </div>
-        {/* sample 2 */}
-        <div className="p-5">
-          <img
-            src="images/beer/sm/FortunateIslands4Pack_480x.webp"
-            alt="beer product"
-          />
-          <div className="mt-4">
-            <h1 className="text-lg">Fortunate Islands</h1>
-            <span className="text-sm opacity-70">Pale Ale</span>
-          </div>
-        </div>
-        {/* sample 3 */}
-        <div className="p-5">
-          <img
-            src="images/beer/sm/FortunateIslands4Pack_480x.webp"
-            alt="beer product"
-          />
-          <div className="mt-4">
-            <h1 className="text-lg">Fortunate Islands</h1>
-            <span className="text-sm opacity-70">Pale Ale</span>
-          </div>
-        </div>
+        {beerProduct.map((beer) => {
+          return (
+            <div className="p-5" key={beer.id}>
+              <img src={beer.image} alt={beer.imageDesc} />
+              <div className="mt-4">
+                <h1 className="text-lg">{beer.title}</h1>
+                <span className="text-sm opacity-70">{beer.description}</span>
+              </div>
+            </div>
+          );
+        })}
       </div>
 
       {/* view more link */}
