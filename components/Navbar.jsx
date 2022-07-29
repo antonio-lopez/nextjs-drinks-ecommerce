@@ -11,11 +11,15 @@ const Navbar = () => {
     <nav className="mx-auto max-w-7xl">
       {/* mobile container */}
       <div className="flex justify-between p-4">
-        <img
-          className="h-10 w-10"
-          src="/images/logo/mt-300_100x.webp"
-          alt="logo"
-        />
+        <Link href="/" passHref>
+          <a href="home">
+            <img
+              className="h-10 w-10"
+              src="/images/logo/mt-300_100x.webp"
+              alt="logo"
+            />
+          </a>
+        </Link>
         <button
           type="button"
           onClick={() => setIsOpen((open) => !open)}
