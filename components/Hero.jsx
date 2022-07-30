@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section className="mx-auto min-h-screen max-w-7xl 2xl:min-h-full">
+    <section className="mx-auto min-h-screen max-w-7xl 2xl:my-40 2xl:min-h-full">
       <div className="grid grid-cols-1 gap-y-8 px-4 pt-32 text-white sm:gap-y-28 sm:px-8 lg:grid-cols-2 lg:gap-y-0 lg:gap-x-10 lg:pt-10 2xl:px-0">
         <h1 className="text-2xl font-bold sm:text-5xl">
           Modern Times is an intrepid cadre of brewers, coffee roasters,
