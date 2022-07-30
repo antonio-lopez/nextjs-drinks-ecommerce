@@ -22,7 +22,7 @@ const Navbar = () => {
         </Link>
 
         {/* desktop nav */}
-        <ul className="flex space-x-14 text-white">
+        <ul className="hidden space-x-14 text-white lg:flex">
           {navLinks.map((link) => {
             return (
               <li key={link.id}>
