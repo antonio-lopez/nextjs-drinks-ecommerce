@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { beerProduct } from '../data';
 
@@ -21,7 +22,11 @@ const BeerProduct = () => {
 
       {/* view more link */}
       <div className="flex items-center justify-end space-x-1">
-        <span>View More</span>
+        <Link href="/" passHref>
+          <a className="hover:text-white/70" href="/beer">
+            View More
+          </a>
+        </Link>
         <AiOutlineArrowRight className="h-6 w-6" />
       </div>
     </section>
