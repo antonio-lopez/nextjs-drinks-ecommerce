@@ -9,8 +9,8 @@ const Navbar = () => {
 
   return (
     <nav className="mx-auto max-w-7xl">
-      {/* mobile container */}
-      <div className="flex justify-between p-4 sm:p-8">
+      {/* container */}
+      <div className="flex justify-between p-4 sm:p-8 2xl:px-0">
         <Link href="/" passHref>
           <a href="home">
             <img
@@ -20,10 +20,25 @@ const Navbar = () => {
             />
           </a>
         </Link>
+
+        {/* desktop nav */}
+        <ul className="flex space-x-14 text-white">
+          {navLinks.map((link) => {
+            return (
+              <li key={link.id}>
+                <Link href="/" passHref>
+                  <a href="link">{link.navLink}</a>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+
+        {/* mobile menu btn */}
         <button
           type="button"
           onClick={() => setIsOpen((open) => !open)}
-          className="lg:hidded"
+          className="lg:hidden"
         >
           <BiMenuAltRight
             className="h-10 w-10 text-white"
@@ -31,7 +46,7 @@ const Navbar = () => {
           />
         </button>
 
-        {/* mobile menu */}
+        {/* mobile nav */}
         <div
           className={`${
             isOpen ? 'translate-x-0' : '-translate-x-full'
