@@ -3,7 +3,7 @@ const Blog = () => {
     <section className="bg-white">
       {/* grid container */}
       <div className="mx-auto mt-24 max-w-7xl">
-        <div className="grid grid-cols-1 gap-y-8 px-6 py-10 sm:px-20">
+        <div className="grid grid-cols-1 gap-y-8 px-6 py-10 sm:px-20 lg:grid-cols-3 lg:gap-x-8 2xl:px-0">
           {/* sample 1 */}
           <div className="border border-gray-300">
             <img
