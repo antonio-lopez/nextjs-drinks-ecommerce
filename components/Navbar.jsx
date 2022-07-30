@@ -25,7 +25,7 @@ const Navbar = () => {
         <ul className="hidden space-x-14 text-white lg:flex">
           {navLinks.map((link) => {
             return (
-              <li key={link.id}>
+              <li className="hover:text-white/50" key={link.id}>
                 <Link href="/" passHref>
                   <a href="link">{link.navLink}</a>
                 </Link>
