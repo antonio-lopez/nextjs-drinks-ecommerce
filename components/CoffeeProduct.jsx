@@ -3,12 +3,12 @@ import { coffeeProduct } from '../data';
 
 const CoffeeProduct = () => {
   return (
-    <section className="mx-auto mt-24 max-w-7xl px-4 text-white sm:px-8">
+    <section className="mx-auto mt-24 max-w-7xl px-4 text-white sm:px-8 2xl:px-0">
       <h1 className="mb-6 text-2xl font-bold sm:text-4xl">Our Coffee</h1>
       <div className="grid grid-cols-1 place-items-center sm:grid-cols-2">
         {coffeeProduct.map((coffee) => {
           return (
-            <div className="p-5 sm:even:mt-20" key={coffee.id}>
+            <div className="p-5 sm:even:mt-20 lg:p-20" key={coffee.id}>
               <img src={coffee.image} alt={coffee.imageDesc} />
               <div className="mt-4">
                 <h1 className="text-lg">{coffee.title}</h1>
