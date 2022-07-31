@@ -3,7 +3,7 @@ import React from 'react';
 // import Link from 'next/link';
 import { allCoffee } from '../../data';
 
-const Coffee = () => {
+const AllCoffee = () => {
   return (
     <section className="mx-auto max-w-7xl text-white">
       <div className="mt-10 px-4 lg:px-10">
@@ -32,4 +32,4 @@ const Coffee = () => {
   );
 };
 
-export default Coffee;
+export default AllCoffee;

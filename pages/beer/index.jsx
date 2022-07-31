@@ -2,7 +2,7 @@
 import React from 'react';
 import { allBeer } from '../../data';
 
-const Beer = () => {
+const AllBeer = () => {
   return (
     <section className="mx-auto max-w-7xl text-white">
       <div className="mt-10 px-4 lg:px-10">
@@ -28,4 +28,4 @@ const Beer = () => {
   );
 };
 
-export default Beer;
+export default AllBeer;
