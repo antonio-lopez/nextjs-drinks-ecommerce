@@ -1,6 +1,5 @@
 /* eslint-disable react/self-closing-comp */
 import React from 'react';
-import Link from 'next/link';
 import { allBeer } from '../../data';
 
 const Beer = () => {
@@ -11,9 +10,6 @@ const Beer = () => {
         <ul className="mt-10 grid grid-cols-2 place-items-center gap-8 lg:grid-cols-3 lg:gap-16">
           {allBeer.map((item) => (
             <li className="group relative" key={item.id}>
-              {/* <Link href={`/amiibo/amiiboseries/${item.name}`}>
-                <a>{item.name}</a>
-              </Link> */}
               <div className="absolute flex h-full w-full flex-col items-center justify-center bg-black/70 text-center group-hover:flex lg:hidden">
                 <h1 className="text-xl lg:text-3xl">{item.title}</h1>
                 <p className="text-xs lg:text-base">{item.description}</p>
