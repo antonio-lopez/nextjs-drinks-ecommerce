@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import { AiOutlineArrowRight } from 'react-icons/ai';
 import { beerProduct } from '../data';
+import Product from './Home/Product';
+import ViewMore from './ViewMore';
 
 const BeerProduct = () => {
   return (
@@ -8,27 +8,21 @@ const BeerProduct = () => {
       <h1 className="mb-6 text-2xl font-bold sm:text-4xl">Our Beer</h1>
       <div className="grid grid-cols-1 place-items-center sm:grid-cols-3">
         {beerProduct.map((beer) => {
+          const { id, image, imageDesc, title, description } = beer;
           return (
-            <div className="p-5" key={beer.id}>
-              <img src={beer.image} alt={beer.imageDesc} />
-              <div className="mt-4">
-                <h1 className="text-lg">{beer.title}</h1>
-                <span className="text-sm opacity-70">{beer.description}</span>
-              </div>
-            </div>
+            <Product
+              key={id}
+              image={image}
+              imageDesc={imageDesc}
+              title={title}
+              description={description}
+            />
           );
         })}
       </div>
 
-      {/* view more link */}
-      <div className="flex items-center justify-end space-x-1">
-        <Link href="/beer" passHref>
-          <a className="hover:text-white/70" href="/beer">
-            View More
-          </a>
-        </Link>
-        <AiOutlineArrowRight className="h-6 w-6" />
-      </div>
+      {/* view more btn link */}
+      <ViewMore />
     </section>
   );
 };
