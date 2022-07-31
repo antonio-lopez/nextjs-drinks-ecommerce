@@ -58,3 +58,76 @@ export const beerProduct = [
     description: 'Pale Ale',
   },
 ];
+
+export const allBeer = [
+  {
+    id: 0,
+    image: 'images/beer/sm/FortunateIslands4Pack_480x.webp',
+    imageDesc: 'beer product',
+    title: 'Fortunate Islands',
+    description: 'Pale Ale',
+  },
+  {
+    id: 1,
+    image: 'images/beer/sm/FortunateIslands4Pack_480x.webp',
+    imageDesc: 'beer product',
+    title: 'Fortunate Islands',
+    description: 'Pale Ale',
+  },
+  {
+    id: 2,
+    image: 'images/beer/sm/FortunateIslands4Pack_480x.webp',
+    imageDesc: 'beer product',
+    title: 'Fortunate Islands',
+    description: 'Pale Ale',
+  },
+  {
+    id: 3,
+    image: 'images/beer/sm/FortunateIslands4Pack_480x.webp',
+    imageDesc: 'beer product',
+    title: 'Fortunate Islands',
+    description: 'Pale Ale',
+  },
+  {
+    id: 4,
+    image: 'images/beer/sm/FortunateIslands4Pack_480x.webp',
+    imageDesc: 'beer product',
+    title: 'Fortunate Islands',
+    description: 'Pale Ale',
+  },
+  {
+    id: 5,
+    image: 'images/beer/sm/FortunateIslands4Pack_480x.webp',
+    imageDesc: 'beer product',
+    title: 'Fortunate Islands',
+    description: 'Pale Ale',
+  },
+  {
+    id: 6,
+    image: 'images/beer/sm/FortunateIslands4Pack_480x.webp',
+    imageDesc: 'beer product',
+    title: 'Fortunate Islands',
+    description: 'Pale Ale',
+  },
+  {
+    id: 7,
+    image: 'images/beer/sm/FortunateIslands4Pack_480x.webp',
+    imageDesc: 'beer product',
+    title: 'Fortunate Islands',
+    description: 'Pale Ale',
+  },
+  {
+    id: 8,
+    image: 'images/beer/sm/FortunateIslands4Pack_480x.webp',
+    imageDesc: 'beer product',
+    title: 'Fortunate Islands',
+    description: 'Pale Ale',
+  },
+  {
+    id: 9,
+    image: 'images/beer/sm/FortunateIslands4Pack_480x.webp',
+    imageDesc: 'beer product',
+    title: 'Fortunate Islands',
+    description: 'Pale Ale',
+  },
+];
