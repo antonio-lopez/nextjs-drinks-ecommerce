@@ -74,8 +74,8 @@ const Navbar = () => {
               {navLinks.map((link) => {
                 return (
                   <li key={link.id}>
-                    <Link href="/" passHref>
-                      <a href="link">{link.navLink}</a>
+                    <Link href={link.navLink} passHref>
+                      <a href="link">{link.title}</a>
                     </Link>
                   </li>
                 );
