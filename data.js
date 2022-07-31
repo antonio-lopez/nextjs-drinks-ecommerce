@@ -1,9 +1,9 @@
 export const navLinks = [
-  { id: 0, navLink: 'Beer' },
-  { id: 1, navLink: 'Coffee' },
-  { id: 2, navLink: 'Blog' },
-  { id: 3, navLink: 'About' },
-  { id: 4, navLink: 'Contact' },
+  { id: 0, title: 'Beer', navLink: '/beer' },
+  { id: 1, title: 'Coffee', navLink: '/coffee' },
+  { id: 2, title: 'Blog', navLink: '/blog' },
+  { id: 3, title: 'About', navLink: '/about' },
+  { id: 4, title: 'Contact', navLink: '/contact' },
 ];
 export const coffeeProduct = [
   {
@@ -129,5 +129,78 @@ export const allBeer = [
     imageDesc: 'beer product',
     title: 'Fortunate Islands',
     description: 'Pale Ale',
+  },
+];
+
+export const allCoffee = [
+  {
+    id: 0,
+    image: 'images/coffee/sm/SteadyHandDecaf_12oz_480x.webp',
+    imageDesc: 'coffee product',
+    title: 'Steady Hand Decaf',
+    description: 'Process Styled: Natural',
+  },
+  {
+    id: 1,
+    image: 'images/coffee/sm/SteadyHandDecaf_12oz_480x.webp',
+    imageDesc: 'coffee product',
+    title: 'Steady Hand Decaf',
+    description: 'Process Styled: Natural',
+  },
+  {
+    id: 2,
+    image: 'images/coffee/sm/SteadyHandDecaf_12oz_480x.webp',
+    imageDesc: 'coffee product',
+    title: 'Steady Hand Decaf',
+    description: 'Process Styled: Natural',
+  },
+  {
+    id: 3,
+    image: 'images/coffee/sm/SteadyHandDecaf_12oz_480x.webp',
+    imageDesc: 'coffee product',
+    title: 'Steady Hand Decaf',
+    description: 'Process Styled: Natural',
+  },
+  {
+    id: 4,
+    image: 'images/coffee/sm/SteadyHandDecaf_12oz_480x.webp',
+    imageDesc: 'coffee product',
+    title: 'Steady Hand Decaf',
+    description: 'Process Styled: Natural',
+  },
+  {
+    id: 5,
+    image: 'images/coffee/sm/SteadyHandDecaf_12oz_480x.webp',
+    imageDesc: 'coffee product',
+    title: 'Steady Hand Decaf',
+    description: 'Process Styled: Natural',
+  },
+  {
+    id: 6,
+    image: 'images/coffee/sm/SteadyHandDecaf_12oz_480x.webp',
+    imageDesc: 'coffee product',
+    title: 'Steady Hand Decaf',
+    description: 'Process Styled: Natural',
+  },
+  {
+    id: 7,
+    image: 'images/coffee/sm/SteadyHandDecaf_12oz_480x.webp',
+    imageDesc: 'coffee product',
+    title: 'Steady Hand Decaf',
+    description: 'Process Styled: Natural',
+  },
+  {
+    id: 8,
+    image: 'images/coffee/sm/SteadyHandDecaf_12oz_480x.webp',
+    imageDesc: 'coffee product',
+    title: 'Steady Hand Decaf',
+    description: 'Process Styled: Natural',
+  },
+  {
+    id: 9,
+    image: 'images/coffee/sm/SteadyHandDecaf_12oz_480x.webp',
+    imageDesc: 'coffee product',
+    title: 'Steady Hand Decaf',
+    description: 'Process Styled: Natural',
   },
 ];

@@ -26,8 +26,8 @@ const Navbar = () => {
           {navLinks.map((link) => {
             return (
               <li className="hover:text-white/50" key={link.id}>
-                <Link href="/" passHref>
-                  <a href="link">{link.navLink}</a>
+                <Link href={link.navLink} passHref>
+                  <a href="link">{link.title}</a>
                 </Link>
               </li>
             );

@@ -22,7 +22,7 @@ const BeerProduct = () => {
 
       {/* view more link */}
       <div className="flex items-center justify-end space-x-1">
-        <Link href="/" passHref>
+        <Link href="/beer" passHref>
           <a className="hover:text-white/70" href="/beer">
             View More
           </a>
