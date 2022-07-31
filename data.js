@@ -204,3 +204,60 @@ export const allCoffee = [
     description: 'Process Styled: Natural',
   },
 ];
+
+export const allBlog = [
+  {
+    id: 0,
+    image: 'images/coffee/nathan-dumlao-zUNs99PGDg0-unsplash.jpg',
+    imageDesc: 'blog cover',
+    date: 'July 20, 2022',
+    title: 'Special Release Highlight: Pool Zone',
+    description:
+      'The sun is currently kicking ass and taking names, but luckily, our resident mages of fermentation have graciously blessed us with a new form of IPA wizardry that will provide...',
+  },
+  {
+    id: 1,
+    image: 'images/coffee/nathan-dumlao-zUNs99PGDg0-unsplash.jpg',
+    imageDesc: 'blog cover',
+    date: 'July 20, 2022',
+    title: 'Special Release Highlight: Pool Zone',
+    description:
+      'The sun is currently kicking ass and taking names, but luckily, our resident mages of fermentation have graciously blessed us with a new form of IPA wizardry that will provide...',
+  },
+  {
+    id: 2,
+    image: 'images/coffee/nathan-dumlao-zUNs99PGDg0-unsplash.jpg',
+    imageDesc: 'blog cover',
+    date: 'July 20, 2022',
+    title: 'Special Release Highlight: Pool Zone',
+    description:
+      'The sun is currently kicking ass and taking names, but luckily, our resident mages of fermentation have graciously blessed us with a new form of IPA wizardry that will provide...',
+  },
+  {
+    id: 3,
+    image: 'images/coffee/nathan-dumlao-zUNs99PGDg0-unsplash.jpg',
+    imageDesc: 'blog cover',
+    date: 'July 20, 2022',
+    title: 'Special Release Highlight: Pool Zone',
+    description:
+      'The sun is currently kicking ass and taking names, but luckily, our resident mages of fermentation have graciously blessed us with a new form of IPA wizardry that will provide...',
+  },
+  {
+    id: 4,
+    image: 'images/coffee/nathan-dumlao-zUNs99PGDg0-unsplash.jpg',
+    imageDesc: 'blog cover',
+    date: 'July 20, 2022',
+    title: 'Special Release Highlight: Pool Zone',
+    description:
+      'The sun is currently kicking ass and taking names, but luckily, our resident mages of fermentation have graciously blessed us with a new form of IPA wizardry that will provide...',
+  },
+  {
+    id: 5,
+    image: 'images/coffee/nathan-dumlao-zUNs99PGDg0-unsplash.jpg',
+    imageDesc: 'blog cover',
+    date: 'July 20, 2022',
+    title: 'Special Release Highlight: Pool Zone',
+    description:
+      'The sun is currently kicking ass and taking names, but luckily, our resident mages of fermentation have graciously blessed us with a new form of IPA wizardry that will provide...',
+  },
+];
