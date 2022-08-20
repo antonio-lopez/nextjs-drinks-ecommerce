@@ -1,24 +1,24 @@
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import Divider from '../../components/Divider';
 
-const Beer = () => {
+const Coffee = () => {
   return (
     <section className="mx-auto max-w-7xl px-4 text-white">
       <div className="mt-12 grid lg:grid-cols-2">
         <div className="space-y-5 place-self-center px-5 text-center text-3xl lg:px-0">
-          <h1>Fortunate Islands</h1>
+          <h1>Steady Hand Decaf</h1>
           <img
-            src="../images/beer/sm/FortunateIslands4Pack_480x.webp"
+            src="../images/coffee/sm/SteadyHandDecaf_12oz_480x.webp"
             alt="beer product"
           />
         </div>
         <div className="mt-6 text-center text-sm">
-          <h2 className="pb-2 text-lg">Beer Style: Hoppy Pale Ale</h2>
-          <h3>5.0% ABV • 16 FL OZ</h3>
+          <h2 className="pb-2 text-lg">Process Style: Swiss Water Process</h2>
+          <h3>Rotating Single Origin</h3>
           <Divider />
-          <p className="py-2">Notes: Mango - Tangerine - Passionfruit</p>
+          <p className="py-2">Notes: Cherry Cobbler - Raisin - Lemon Bar</p>
           <Divider />
-          <p className="pb-2">Quantity : 4 Pack</p>
+          <p className="pb-2">Size: 12 oz</p>
           <span>$12</span>
 
           <div className="my-8 flex flex-col items-center space-y-7">
@@ -58,4 +58,4 @@ const Beer = () => {
   );
 };
 
-export default Beer;
+export default Coffee;
