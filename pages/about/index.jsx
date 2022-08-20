@@ -8,7 +8,7 @@ const About = () => {
             …an intrepid cadre of brewers, coffee roasters, culinary wizards,
             creative powerhouses, and beer-slingers that began as a 30bbl
             production brewery and tasting room in the Point Loma neighborhood
-            of San Diego in 2013. Today, we're distributed throughout
+            of San Diego in 2013. Today, we are distributed throughout
             California, Arizona, Colorado, Nevada, Utah, Hawaii, and Texas.
             Since its inception, the Modern Times multiverse has expanded to
             include a robust and ever-growing barrel program, killer satellite
@@ -77,7 +77,7 @@ const About = () => {
               <br />
               <br />
               Our beers are often named after real utopian experiments and
-              mythological utopias, plus there's a healthy amount of random
+              mythological utopias, plus there is a healthy amount of random
               brain nuggets & fantastical inside jokes from the astoundingly
               creative and talented minds of the people who work here.
             </p>

@@ -1,9 +1,10 @@
 export const navLinks = [
-  { id: 0, title: 'Beer', navLink: '/beer' },
-  { id: 1, title: 'Coffee', navLink: '/coffee' },
-  { id: 2, title: 'Blog', navLink: '/blog' },
-  { id: 3, title: 'About', navLink: '/about' },
-  { id: 4, title: 'Contact', navLink: '/contact' },
+  { id: 0, title: 'Home', navLink: '/' },
+  { id: 1, title: 'Beer', navLink: '/beer' },
+  { id: 2, title: 'Coffee', navLink: '/coffee' },
+  { id: 3, title: 'Blog', navLink: '/blog' },
+  { id: 4, title: 'About', navLink: '/about' },
+  { id: 5, title: 'Contact', navLink: '/contact' },
 ];
 export const coffeeProduct = [
   {
@@ -259,5 +260,44 @@ export const allBlog = [
     title: 'Special Release Highlight: Pool Zone',
     description:
       'The sun is currently kicking ass and taking names, but luckily, our resident mages of fermentation have graciously blessed us with a new form of IPA wizardry that will provide...',
+  },
+];
+
+export const contactInfo = [
+  {
+    id: 0,
+    imageSrc: '/images/about/nate02.jpeg',
+    imageDesc: 'contact 1',
+    city: 'Point Loma',
+    barName: 'The Lomaland Fermentorium',
+    address: '3725 Greenwood St. Diego, CA 92110',
+    phoneNumber: '(619) 546-9694',
+  },
+  {
+    id: 1,
+    imageSrc: '/images/about/north-park.jpg',
+    imageDesc: 'contact 2',
+    city: 'North Park',
+    barName: 'Flavordome',
+    address: '3000 Upas St (corner of 30th & Upas) San Diego, CA 92104',
+    phoneNumber: '(619) 269-5222',
+  },
+  {
+    id: 2,
+    imageSrc: '/images/about/encinitas.jpg',
+    imageDesc: 'contact 3',
+    city: 'Encinitas',
+    barName: 'The Far West Lounge',
+    address: '470 S. Coast Highway 101 Encinitas, CA 92024',
+    phoneNumber: '(760) 452-4304',
+  },
+  {
+    id: 3,
+    imageSrc: '/images/about/anaheim.jpg',
+    imageDesc: 'contact 4',
+    city: 'Anaheim',
+    barName: 'Leisuretown',
+    address: '549 South Anaheim Blvd. Anaheim, CA 92805',
+    phoneNumber: '(714) 874-4439',
   },
 ];
