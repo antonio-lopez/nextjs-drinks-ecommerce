@@ -6,3 +6,4 @@ export { default as CoffeeProduct } from './CoffeeProduct';
 export { default as BlogList } from './BlogList';
 export { default as Blog } from './Blog';
 export { default as Divider } from './Divider';
+export { default as ProductDetails } from './ProductDetails';
