@@ -50,7 +50,7 @@ const Navbar = () => {
         <div
           className={`${
             isOpen ? 'translate-x-0' : '-translate-x-full'
-          } absolute top-0 left-0 right-0 z-20 min-h-screen w-full bg-white px-4 transition-all duration-1000`}
+          } absolute top-0 left-0 right-0 z-20 min-h-screen w-full bg-white px-4 transition-all duration-700`}
         >
           {/* mobile menu close icon */}
           <div className="mt-5 flex min-h-screen w-full flex-col space-y-10">
@@ -75,7 +75,9 @@ const Navbar = () => {
                 return (
                   <li key={link.id}>
                     <Link href={link.navLink} passHref>
-                      <a href="link">{link.title}</a>
+                      <a onClick={() => setIsOpen((open) => !open)} href="link">
+                        {link.title}
+                      </a>
                     </Link>
                   </li>
                 );
