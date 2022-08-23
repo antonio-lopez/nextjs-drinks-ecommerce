@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="mx-auto my-12 max-w-7xl text-white">
       <div className="flex flex-col items-center justify-center space-y-7">
         <span className="text-xl">Follow</span>
-        <div className="flex space-x-3">
+        <div className="flex items-center justify-center space-x-3">
           <a
             className="hover:text-white/70"
             href="https://github.com/antonio-lopez"
