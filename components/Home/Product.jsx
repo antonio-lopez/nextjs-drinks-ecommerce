@@ -1,10 +1,14 @@
-const Product = ({ image, imageDesc, title, description }) => {
+import Link from 'next/link';
+
+const Product = ({ image, imageDesc, name, coffeeStyle, slug }) => {
   return (
     <div className="p-5">
-      <img src={image} alt={imageDesc} />
+      <Link href={`/coffee/${slug?.current}`}>
+        <img src={image} alt={imageDesc} />
+      </Link>
       <div className="mt-4">
-        <h1 className="text-lg">{title}</h1>
-        <span className="text-sm opacity-70">{description}</span>
+        <h1 className="text-lg">{name}</h1>
+        <span className="text-sm opacity-70">{coffeeStyle}</span>
       </div>
     </div>
   );
