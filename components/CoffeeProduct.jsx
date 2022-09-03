@@ -16,8 +16,9 @@ const CoffeeProduct = ({ coffeeProducts }) => {
               image={urlFor(image[0])}
               imageDesc={name}
               name={name}
-              coffeeStyle={coffeStyle}
+              style={coffeStyle}
               slug={slug}
+              product="coffee"
             />
           );
         })}

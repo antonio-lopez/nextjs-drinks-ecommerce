@@ -1,11 +1,11 @@
 import { client } from '../lib/client';
 import { Hero, BeerProduct, CoffeeProduct, BlogList } from '../components';
 
-const Home = ({ coffeeProducts }) => {
+const Home = ({ coffeeProducts, beerProducts }) => {
   return (
     <>
       <Hero />
-      {/* <BeerProduct /> */}
+      <BeerProduct beerProducts={beerProducts} />
       <CoffeeProduct coffeeProducts={coffeeProducts} />
       {/* <BlogList /> */}
     </>
