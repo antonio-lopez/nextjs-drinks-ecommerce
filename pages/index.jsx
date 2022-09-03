@@ -5,9 +5,9 @@ const Home = ({ coffeeProducts }) => {
   return (
     <>
       <Hero />
-      <BeerProduct />
+      {/* <BeerProduct /> */}
       <CoffeeProduct coffeeProducts={coffeeProducts} />
-      <BlogList />
+      {/* <BlogList /> */}
     </>
   );
 };

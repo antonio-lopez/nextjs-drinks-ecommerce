@@ -2,31 +2,30 @@ import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import Divider from './Divider';
 
 const ProductDetails = ({
+  image,
   name,
-  imgSrc,
-  imgDesc,
   style,
-  styleInfo,
-  notes,
-  qty,
   price,
+  size,
   description,
+  styleDetails,
+  notes,
 }) => {
   return (
     <section className="mx-auto max-w-7xl px-4 text-white">
       <div className="mt-12 grid lg:grid-cols-2">
         <div className="space-y-5 place-self-center px-5 text-center text-3xl lg:px-0">
           <h1>{name}</h1>
-          <img src={imgSrc} alt={imgDesc} />
+          <img src={image} alt={name} />
         </div>
         <div className="mt-6 text-center text-sm">
           <h2 className="pb-2 text-lg">{style}</h2>
-          <h3>{styleInfo}</h3>
+          <h3>{styleDetails}</h3>
           <Divider />
           <p className="py-2">{notes}</p>
           <Divider />
-          <p className="pb-2">{qty}</p>
-          <span>{price}</span>
+          <p className="pb-2">{size}</p>
+          <span>Price: ${price}</span>
 
           <div className="my-8 flex flex-col items-center space-y-7">
             <div className="flex h-11 w-52 items-center justify-center rounded-md bg-white text-black ">

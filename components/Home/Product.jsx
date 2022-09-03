@@ -3,7 +3,7 @@ import Link from 'next/link';
 const Product = ({ image, imageDesc, name, coffeeStyle, slug }) => {
   return (
     <div className="p-5">
-      <Link href={`/coffee/${slug?.current}`}>
+      <Link href={`/coffee/${slug.current}`}>
         <img src={image} alt={imageDesc} />
       </Link>
       <div className="mt-4">
