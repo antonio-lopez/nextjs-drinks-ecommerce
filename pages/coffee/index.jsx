@@ -1,26 +1,28 @@
 /* eslint-disable react/self-closing-comp */
-import React from 'react';
-// import Link from 'next/link';
-import { allCoffee } from '../../data';
+import Link from 'next/link';
+import { client, urlFor } from '../../lib/client';
 
-const AllCoffee = () => {
+const AllCoffee = ({ coffeeProducts }) => {
   return (
     <section className="mx-auto max-w-7xl text-white">
       <div className="mt-10 px-4 lg:px-10">
         <h1 className="text-center text-3xl lg:text-5xl">Our Coffee</h1>
         <ul className="mt-10 grid grid-cols-2 place-items-center gap-8 lg:grid-cols-3 lg:gap-16">
-          {allCoffee.map((item) => (
-            <li className="group relative" key={item.id}>
-              {/* <Link href={`/amiibo/amiiboseries/${item.name}`}>
-                <a>{item.name}</a>
-              </Link> */}
-              <div className="absolute flex h-full w-full flex-col items-center justify-center bg-black/70 text-center group-hover:flex lg:hidden">
-                <h1 className="text-xl lg:text-3xl">{item.title}</h1>
-                <p className="text-xs lg:text-base">{item.description}</p>
-              </div>
-              <img className="" src={item.image} alt={item.imageDesc} />
-            </li>
-          ))}
+          {coffeeProducts.map((coffee) => {
+            const { id, name, image, coffeStyle, slug } = coffee;
+
+            return (
+              <li className="group relative" key={id}>
+                <Link href={`/coffee/${slug.current}`}>
+                  <div className="absolute flex h-full w-full flex-col items-center justify-center bg-black/70 text-center group-hover:flex lg:hidden">
+                    <h1 className="text-xl lg:text-3xl">{name}</h1>
+                    <p className="text-xs lg:text-base">{coffeStyle}</p>
+                  </div>
+                </Link>
+                <img src={urlFor(image[0])} alt={name} />
+              </li>
+            );
+          })}
         </ul>
 
         {/* divider line */}
@@ -30,6 +32,15 @@ const AllCoffee = () => {
       </div>
     </section>
   );
+};
+
+export const getServerSideProps = async () => {
+  const coffeeQuery = `*[_type == "coffee"]`;
+  const coffeeProducts = await client.fetch(coffeeQuery);
+
+  return {
+    props: { coffeeProducts },
+  };
 };
 
 export default AllCoffee;
