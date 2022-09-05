@@ -1,6 +1,7 @@
+import Link from 'next/link';
 import TruncateString from '../lib/truncate';
 
-const Blog = ({ image, title, date, body }) => {
+const Blog = ({ image, title, date, body, slug }) => {
   const dateString = new Date(date);
 
   return (
@@ -10,9 +11,14 @@ const Blog = ({ image, title, date, body }) => {
         <span className="text-sm opacity-60">{dateString.toDateString()}</span>
         <h1 className="text-xl">{title}</h1>
         <p className="pb-5 text-sm opacity-60">{TruncateString(body, 200)}</p>
-        <span className="text-sm underline decoration-1 underline-offset-8">
-          Learn More
-        </span>
+        <Link href={`/blog/${slug.current}`}>
+          <button
+            type="button"
+            className="text-sm underline decoration-1 underline-offset-8"
+          >
+            Learn More
+          </button>
+        </Link>
       </div>
     </div>
   );
