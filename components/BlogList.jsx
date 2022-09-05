@@ -1,4 +1,3 @@
-// import { allBlog } from '../data';
 import Blog from './Blog';
 import { urlFor } from '../lib/client';
 
@@ -21,19 +20,6 @@ const BlogList = ({ blogPosts }) => {
               />
             );
           })}
-          {/* {allBlog.map((blog) => {
-            const { id, image, imageDesc, date, title, description } = blog;
-            return (
-              <Blog
-                key={id}
-                image={image}
-                imageDesc={imageDesc}
-                date={date}
-                title={title}
-                description={description}
-              />
-            );
-          })} */}
         </div>
       </div>
     </section>

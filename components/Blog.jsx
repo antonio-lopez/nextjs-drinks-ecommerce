@@ -2,6 +2,7 @@ import TruncateString from '../lib/truncate';
 
 const Blog = ({ image, title, date, body }) => {
   const dateString = new Date(date);
+
   return (
     <div className="border border-gray-300">
       <img className="h-60 w-full object-cover" src={image} alt={title} />
