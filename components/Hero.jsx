@@ -18,7 +18,7 @@ const Hero = () => {
             killer satellite brewery & tasting room locations, and restaurants
             in Anaheim and Encinitas.
           </p>
-          <Link href="/" passHref>
+          <Link href="/about" passHref>
             <a
               href="/link"
               className="underline decoration-1 underline-offset-8 hover:text-white/50"

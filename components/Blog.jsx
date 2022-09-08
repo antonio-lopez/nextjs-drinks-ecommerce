@@ -12,12 +12,13 @@ const Blog = ({ image, title, date, body, slug }) => {
         <h1 className="text-xl">{title}</h1>
         <p className="pb-5 text-sm opacity-60">{TruncateString(body, 200)}</p>
         <Link href={`/blog/${slug.current}`}>
-          <button
-            type="button"
-            className="text-sm underline decoration-1 underline-offset-8"
+          <a
+            href="/link"
+            passHref
+            className="text-sm underline decoration-2 underline-offset-8"
           >
             Learn More
-          </button>
+          </a>
         </Link>
       </div>
     </div>
