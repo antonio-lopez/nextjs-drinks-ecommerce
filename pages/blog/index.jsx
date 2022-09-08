@@ -8,7 +8,7 @@ const AllBlog = ({ blogPosts }) => {
       {/* grid container */}
       <div className="bg-white">
         <div className="mx-auto mt-10 max-w-7xl ">
-          <ul className="grid grid-cols-1 gap-y-8 px-6 py-10 sm:px-20 lg:grid-cols-3 lg:gap-x-8 2xl:px-0">
+          <ul className="grid grid-cols-1 gap-y-8 px-6 py-10 sm:grid-cols-2 sm:gap-x-5 sm:px-20 lg:grid-cols-3 lg:gap-x-8 2xl:px-0">
             {blogPosts.map((blog) => {
               const { _id, image, title, date, body, slug } = blog;
               return (

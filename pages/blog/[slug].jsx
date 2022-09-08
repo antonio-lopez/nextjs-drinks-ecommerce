@@ -3,12 +3,16 @@ import { client, urlFor } from '../../lib/client';
 
 const Blog = ({ blogs }) => {
   const { image, title, date, body } = blogs;
+  const dateString = new Date(date);
+
   return (
     <article className="mx-auto mt-10 max-w-7xl px-4 text-white lg:px-0">
       <div className="grid grid-cols-1 place-items-center space-y-10">
         <div className="text-center">
           <h1 className="mb-2 text-3xl lg:text-5xl">{title}</h1>
-          <span className="text-sm opacity-70">{date}</span>
+          <span className="text-sm opacity-70">
+            {dateString.toDateString()}
+          </span>
         </div>
         <img src={urlFor(image[0])} alt={title} />
         <p className="whitespace-pre-line text-sm md:text-base">{body}</p>

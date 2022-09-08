@@ -6,7 +6,11 @@ const Blog = ({ image, title, date, body, slug }) => {
 
   return (
     <div className="border border-gray-300">
-      <img className="h-60 w-full object-cover" src={image} alt={title} />
+      <img
+        className="h-60 w-full object-cover object-top"
+        src={image}
+        alt={title}
+      />
       <div className="mt-4 mb-6 space-y-1 px-4">
         <span className="text-sm opacity-60">{dateString.toDateString()}</span>
         <h1 className="text-xl">{title}</h1>
