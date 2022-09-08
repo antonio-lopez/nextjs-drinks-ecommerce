@@ -6,7 +6,7 @@ const CoffeeProduct = ({ coffeeProducts }) => {
   return (
     <section className="mx-auto mt-24 max-w-7xl px-4 text-white sm:px-8 2xl:px-0">
       <h1 className="text-2xl font-bold sm:text-4xl">Our Coffee</h1>
-      <div className="grid grid-cols-1 place-items-center sm:grid-cols-2 lg:pt-20">
+      <div className="grid grid-cols-1 place-items-center sm:grid-cols-2 lg:px-12 lg:pt-10">
         {coffeeProducts.map((coffee) => {
           const { id, name, image, coffeStyle, slug } = coffee;
 

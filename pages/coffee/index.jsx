@@ -13,11 +13,13 @@ const AllCoffee = ({ coffeeProducts }) => {
 
             return (
               <li className="group relative" key={id}>
-                <Link href={`/coffee/${slug.current}`}>
-                  <div className="absolute flex h-full w-full flex-col items-center justify-center bg-black/70 text-center group-hover:flex lg:hidden">
-                    <h1 className="text-xl lg:text-3xl">{name}</h1>
-                    <p className="text-xs lg:text-base">{coffeStyle}</p>
-                  </div>
+                <Link href={`/coffee/${slug.current}`} passHref>
+                  <a href="/link">
+                    <div className="absolute flex h-full w-full flex-col items-center justify-center bg-black/70 text-center group-hover:flex lg:hidden">
+                      <h1 className="text-xl lg:text-3xl">{name}</h1>
+                      <p className="text-xs lg:text-base">{coffeStyle}</p>
+                    </div>
+                  </a>
                 </Link>
                 <img src={urlFor(image[0])} alt={name} />
               </li>

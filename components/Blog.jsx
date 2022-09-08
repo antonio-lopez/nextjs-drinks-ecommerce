@@ -15,7 +15,7 @@ const Blog = ({ image, title, date, body, slug }) => {
         <span className="text-sm opacity-60">{dateString.toDateString()}</span>
         <h1 className="text-xl">{title}</h1>
         <p className="pb-5 text-sm opacity-60">{TruncateString(body, 200)}</p>
-        <Link href={`/blog/${slug.current}`}>
+        <Link href={`/blog/${slug.current}`} passHref>
           <a
             href="/link"
             passHref
