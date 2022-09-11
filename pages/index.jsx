@@ -13,10 +13,10 @@ const Home = ({ coffeeProducts, beerProducts, blogPosts }) => {
 };
 
 export const getServerSideProps = async () => {
-  const coffeeQuery = `*[_type == "coffee"]`;
+  const coffeeQuery = `*[_type == "coffee"][0..3]`;
   const coffeeProducts = await client.fetch(coffeeQuery);
 
-  const beerQuery = `*[_type == "beer"]`;
+  const beerQuery = `*[_type == "beer"][0..2]`;
   const beerProducts = await client.fetch(beerQuery);
 
   const blogQuery = `*[_type == "blog"]`;
