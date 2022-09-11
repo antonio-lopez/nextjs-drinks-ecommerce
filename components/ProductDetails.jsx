@@ -14,11 +14,12 @@ const ProductDetails = ({
   return (
     <section className="mx-auto max-w-7xl px-4 text-white">
       <div className="mt-12 grid lg:grid-cols-2">
-        <div className="space-y-5 place-self-center px-5 text-center text-3xl lg:px-0">
-          <h1>{name}</h1>
-          <img src={image} alt={name} />
+        <div className="space-y-5 place-self-center px-5 text-center text-3xl lg:space-y-0 lg:px-0">
+          <h1 className="lg:hidden">{name}</h1>
+          <img className="" src={image} alt={name} />
         </div>
-        <div className="mt-6 text-center text-sm">
+        <div className="mt-6 text-center text-sm lg:mt-0 lg:px-7">
+          <h1 className="mb-16 hidden text-3xl lg:block">{name}</h1>
           <h2 className="pb-2 text-lg">{style}</h2>
           <h3>{styleDetails}</h3>
           <Divider />
@@ -52,7 +53,7 @@ const ProductDetails = ({
           </div>
         </div>
       </div>
-      <p className="py-3 text-sm">{description}</p>
+      <p className="py-3 text-sm lg:pt-16 lg:text-base">{description}</p>
       <Divider />
     </section>
   );
