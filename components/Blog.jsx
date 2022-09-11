@@ -18,7 +18,6 @@ const Blog = ({ image, title, date, body, slug }) => {
         <Link href={`/blog/${slug.current}`} passHref>
           <a
             href="/link"
-            passHref
             className="text-sm underline decoration-2 underline-offset-8"
           >
             Learn More
