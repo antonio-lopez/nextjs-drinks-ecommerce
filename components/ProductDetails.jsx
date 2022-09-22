@@ -1,5 +1,6 @@
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import Divider from './Divider';
+import { useStateContext } from '../context/StateContext';
 
 const ProductDetails = ({
   image,
@@ -10,7 +11,10 @@ const ProductDetails = ({
   description,
   styleDetails,
   notes,
+  product,
 }) => {
+  const { decrementQty, incrementQty, qty, onAdd } = useStateContext();
+
   return (
     <section className="mx-auto max-w-7xl px-4 text-white">
       <div className="mt-12 grid lg:grid-cols-2">
@@ -30,22 +34,28 @@ const ProductDetails = ({
 
           <div className="my-8 flex flex-col items-center space-y-7">
             <div className="flex h-11 w-52 items-center justify-center rounded-md bg-white text-black ">
-              {/* <span onClick={decQty} className="hover:cursor-pointer"> */}
-              <button className="mr-3 py-3 px-4" type="button">
+              <button
+                className="mr-3 py-3 px-4"
+                type="button"
+                onClick={decrementQty}
+              >
                 <AiOutlineMinus />
               </button>
               <span className="h-full border-x-2 border-veryDarkCyan px-6 py-2 text-black">
-                6
+                {qty}
               </span>
-              {/* <span onClick={incQty} className="hover:cursor-pointer"> */}
-              <button className="ml-3 py-3 px-4" type="button">
+              <button
+                className="ml-3 py-3 px-4"
+                type="button"
+                onClick={incrementQty}
+              >
                 <AiOutlinePlus />
               </button>
             </div>
             {/* add to cart button */}
             <button
               type="button"
-              // onClick={() => onAdd(product, qty)}
+              onClick={() => onAdd(product, qty)}
               className="rounded-xl bg-transparent px-16 py-3 outline outline-1 outline-white"
             >
               Add to cart

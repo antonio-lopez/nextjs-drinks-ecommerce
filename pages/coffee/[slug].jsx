@@ -23,6 +23,7 @@ const Coffee = ({ coffee }) => {
       description={coffeeDetails}
       styleDetails={styleDetails}
       notes={notes}
+      product={coffee}
     />
   );
 };

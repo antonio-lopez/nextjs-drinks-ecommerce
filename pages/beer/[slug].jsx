@@ -23,6 +23,7 @@ const Beer = ({ beer }) => {
       description={beerDetails}
       styleDetails={styleDetails}
       notes={notes}
+      product={beer}
     />
   );
 };
