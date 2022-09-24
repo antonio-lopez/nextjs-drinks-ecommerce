@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { BiMenuAltRight } from 'react-icons/bi';
-import { AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineShoppingCart } from 'react-icons/ai';
 import { navLinks } from '../data';
+import { useStateContext } from '../context/StateContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { totalQuantities } = useStateContext();
 
   return (
     <nav className="mx-auto max-w-7xl">
@@ -20,9 +22,8 @@ const Navbar = () => {
             />
           </a>
         </Link>
-
         {/* desktop nav */}
-        <ul className="hidden space-x-14 text-white lg:flex">
+        <ul className="hidden items-center space-x-14 text-white lg:flex">
           {navLinks.map((link) => {
             return (
               <li className="hover:text-white/50" key={link.id}>
@@ -32,9 +33,15 @@ const Navbar = () => {
               </li>
             );
           })}
+          {/* cart checkout */}
+          <Link href="/checkout">
+            <button type="button" className="flex items-center space-x-2">
+              <AiOutlineShoppingCart className="h-5 w-5" />
+              <span> {`(${totalQuantities})`}</span>
+            </button>
+          </Link>
         </ul>
-
-        {/* mobile menu btn */}
+        {/* cart button */}
         <button
           type="button"
           onClick={() => setIsOpen((open) => !open)}
@@ -45,7 +52,6 @@ const Navbar = () => {
             alt="open mobile menu"
           />
         </button>
-
         {/* mobile nav */}
         <div
           className={`${
@@ -82,6 +88,17 @@ const Navbar = () => {
                   </li>
                 );
               })}
+              {/* cart checkout */}
+              <Link href="/checkout">
+                <button
+                  onClick={() => setIsOpen((open) => !open)}
+                  type="button"
+                  className="flex w-full items-center justify-center space-x-2"
+                >
+                  <AiOutlineShoppingCart className="h-5 w-5" />
+                  <span> {`(${totalQuantities})`}</span>
+                </button>
+              </Link>
             </ul>
           </div>
         </div>

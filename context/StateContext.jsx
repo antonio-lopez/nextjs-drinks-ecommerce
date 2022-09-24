@@ -1,7 +1,6 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable consistent-return */
 /* eslint-disable array-callback-return */
-/* eslint-disable no-underscore-dangle */
 import React, { createContext, useContext, useState } from 'react';
 import { toast } from 'react-hot-toast';
 
@@ -14,9 +13,7 @@ export const StateContext = ({ children }) => {
   const [qty, setQty] = useState(1);
 
   const onAdd = (product, quantity) => {
-    const checkProductInCart = cartItems.find(
-      (item) => item._id === product._id
-    );
+    const checkProductInCart = cartItems.find((item) => item.id === product.id);
     setTotalPrice(
       (prevTotalPrice) => prevTotalPrice + product.price * quantity
     );
@@ -24,7 +21,7 @@ export const StateContext = ({ children }) => {
 
     if (checkProductInCart) {
       const updatedCartItems = cartItems.map((cartProduct) => {
-        if (cartProduct._id === product._id)
+        if (cartProduct.id === checkProductInCart.id)
           return { ...cartProduct, quantity: cartProduct.quantity + quantity };
       });
 
