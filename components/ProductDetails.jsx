@@ -56,7 +56,7 @@ const ProductDetails = ({
             <button
               type="button"
               onClick={() => onAdd(product, qty)}
-              className="rounded-xl bg-transparent px-16 py-3 outline outline-1 outline-white"
+              className="rounded-xl px-16 py-3 ring-1 ring-white"
             >
               Add to cart
             </button>
