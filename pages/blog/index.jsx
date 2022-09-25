@@ -31,7 +31,7 @@ const AllBlog = ({ blogPosts }) => {
 };
 
 export const getServerSideProps = async () => {
-  const blogQuery = `*[_type == "blog"]`;
+  const blogQuery = `*[_type == "blog"] | order(date desc)`;
   const blogPosts = await client.fetch(blogQuery);
 
   return {

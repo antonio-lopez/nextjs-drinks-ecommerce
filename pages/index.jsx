@@ -19,7 +19,7 @@ export const getServerSideProps = async () => {
   const beerQuery = `*[_type == "beer"][0..2]`;
   const beerProducts = await client.fetch(beerQuery);
 
-  const blogQuery = `*[_type == "blog"]`;
+  const blogQuery = `*[_type == "blog"] | order(date desc)`;
   const blogPosts = await client.fetch(blogQuery);
 
   return {
