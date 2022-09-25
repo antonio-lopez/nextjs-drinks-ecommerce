@@ -6,8 +6,10 @@ import {
   AiOutlineMinus,
   AiOutlinePlus,
 } from 'react-icons/ai';
+import toast from 'react-hot-toast';
 import { useStateContext } from '../context/StateContext';
 import { urlFor } from '../lib/client';
+import getStripe from '../lib/getStripe';
 
 const Checkout = () => {
   const {
@@ -17,6 +19,28 @@ const Checkout = () => {
     toggleCartItemQty,
     onRemove,
   } = useStateContext();
+
+  const handleCheckout = async () => {
+    const stripe = await getStripe();
+
+    // response from NEXT JS API
+    const response = await fetch('/api/stripe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(cartItems),
+    });
+
+    if (response.statusCode === 500) return;
+
+    const data = await response.json();
+
+    toast.loading('Redirecting...');
+
+    stripe.redirectToCheckout({ sessionId: data.id });
+  };
+
   return (
     <div className="mt-10 min-h-screen bg-white">
       <div className="mx-auto max-w-7xl px-4 2xl:px-0">
@@ -128,6 +152,7 @@ const Checkout = () => {
               </div>
               <button
                 type="button"
+                onClick={handleCheckout}
                 className="col-start-2 row-start-2 rounded-xl py-3 ring-2 ring-black hover:shadow-xl md:col-start-4"
               >
                 Pay with stripe
