@@ -18,7 +18,7 @@ const Checkout = () => {
     onRemove,
   } = useStateContext();
   return (
-    <div className="min-h-screen bg-white">
+    <div className="mt-10 min-h-screen bg-white">
       <div className="mx-auto max-w-7xl px-4 2xl:px-0">
         {/* empty cart */}
         <div className="grid grid-cols-1">
@@ -29,7 +29,7 @@ const Checkout = () => {
               <Link href="/">
                 <button
                   type="button"
-                  className="rounded-lg py-4 px-6 shadow-xl ring-2 ring-white"
+                  className="rounded-lg py-4 px-6 ring-2 ring-black hover:shadow-xl"
                 >
                   Continue Shopping
                 </button>
@@ -42,7 +42,7 @@ const Checkout = () => {
         {cartItems.length >= 1 && (
           <div>
             {/* header */}
-            <div className="grid grid-cols-5 gap-x-10 py-7 text-gray-500">
+            <div className=" hidden grid-cols-5 gap-x-10 py-7 text-center text-gray-500 md:grid">
               <span className="col-start-2">Product</span>
               <span>Price</span>
               <span>Quantity</span>
@@ -53,19 +53,29 @@ const Checkout = () => {
             {cartItems.map((item) => {
               return (
                 <div key={item.id}>
-                  <div className="grid grid-cols-5 items-center gap-x-10">
-                    <img src={urlFor(item?.image[0])} alt={item.name} />
+                  <div className="grid grid-cols-1 place-items-center gap-x-10 px-5 text-center md:grid-cols-5 md:text-left">
+                    <img
+                      className="hidden md:block"
+                      src={urlFor(item?.image[0])}
+                      alt={item.name}
+                    />
                     {/* product details */}
                     <div>
+                      <img
+                        className="md:hidden"
+                        src={urlFor(item?.image[0])}
+                        alt={item.name}
+                      />
                       <h1 className="font-bold">{item.name}</h1>
-                      <div className="text-gray-500">
+                      <div className="text-sm text-gray-500">
                         <p>{item.size ? item.size : item.quantity}</p>
                         <p>
                           {item.beerStyle ? item.beerStyle : item.coffeStyle}
                         </p>
                       </div>
                     </div>
-                    <span>${item.price}</span>
+                    <span className="pb-5 md:hidden">Price ${item.price}</span>
+                    <span className="hidden md:block">${item.price}</span>
 
                     {/* quantity counter */}
                     <div className="flex h-11 w-36 items-center justify-center rounded-md text-black ring-2 ring-black ">
@@ -89,8 +99,13 @@ const Checkout = () => {
                     </div>
 
                     {/* <span>{item.stock}</span> */}
-                    <div className="flex items-center space-x-14">
-                      <span>${item.price * item.stock}</span>
+                    <div className="flex items-center space-x-10 pt-7 md:pt-0">
+                      <span className="font-bold md:hidden">
+                        Total: ${item.price * item.stock}
+                      </span>
+                      <span className="hidden md:block">
+                        ${item.price * item.stock}
+                      </span>
                       <button type="button" onClick={() => onRemove(item)}>
                         <AiFillDelete size={20} />
                       </button>
@@ -106,16 +121,16 @@ const Checkout = () => {
             })}
 
             {/* subtotal */}
-            <div className="grid grid-cols-5 gap-y-10 pb-16 pt-7">
-              <div className="col-start-4 text-center">
+            <div className="grid grid-cols-1 gap-y-6 px-5 pb-16 pt-7 md:grid-cols-4 lg:grid-cols-5 lg:px-0">
+              <div className="col-start-2 text-center md:col-start-4">
                 Subtotal ({totalQuantities}) :
                 <span className="pl-10 font-bold">${totalPrice}</span>
               </div>
               <button
                 type="button"
-                className="col-start-4 row-start-2 rounded-xl bg-transparent py-3 ring-2 ring-black"
+                className="col-start-2 row-start-2 rounded-xl py-3 ring-2 ring-black hover:shadow-xl md:col-start-4"
               >
-                Add to cart
+                Pay with stripe
               </button>
             </div>
           </div>
