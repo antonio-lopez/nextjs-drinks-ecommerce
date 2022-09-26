@@ -20,10 +20,10 @@ function MyApp({ Component, pageProps }) {
               'Modern Times is a 30bbl production brewery and tasting room in the Point Loma neighborhood of San Diego. Modern Times is named after a beautifully crazy utopian community founded in 1850, and (almost) all of our beers are named after real utopian experiments or mythological utopias.',
             images: [
               {
-                url: 'https://raw.githubusercontent.com/antonio-lopez/we-make-websites/main/public/og-image-cover.png',
+                url: 'https://raw.githubusercontent.com/antonio-lopez/nextjs-drinks-ecommerce/main/public/images/og-modern-times-home.png',
                 width: 800,
                 height: 600,
-                alt: 'Homepage cover',
+                alt: 'Modern Times Home Page',
                 type: 'image/png',
               },
             ],
