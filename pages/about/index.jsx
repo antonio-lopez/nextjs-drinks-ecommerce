@@ -83,7 +83,7 @@ const About = () => {
             </p>
           </div>
           <div className="lg:row-start-1">
-            <img src="/images/about/long_island_house.jpg" alt="" />
+            <img src="/images/about/long_island_house.jpg" alt="about 2" />
           </div>
         </div>
       </div>
