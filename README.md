@@ -1,34 +1,121 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div id="top"></div>
+
+# Modern Times Brewery Ecommerce
+
+> A redesign of the Modern Times brewery online store using Sanity CMS and Stripe.
+
+## Table of contents
+
+- [About The Project](#about-the-project)
+  - [Built With](#built-with)
+  - [Highlights](#highlights)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Acknowledgments](#acknowledgments)
+- [Author](#author)
+
+## About The Project
+
+A challenge to myself to redesign my favorite brewery's online store, [Modern Times Brewery](https://www.moderntimesmerch.com/collections/all) , and use Sanity.io as the CMS (content management system) to manage the store's inventory and blog posts and Stripe for checkout.
+
+### Highlights
+
+- Responsive, full-stack, Next.js ecommerce application
+- Browse coffee and beer products, view product details, add to cart, and checkout
+- Stripe integration for processing payments, shipping rates, and checkout process.
+- CRUD (create, read, update, delete) operations are handled by Sanity's Studio
+- Blog posts can be written in markdown using Sanity's Markdown plugin
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Built With
+
+- [Next.js](https://nextjs.org/)
+- [React.js](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Sanity](https://www.sanity.io/)
+- [Stripe](https://stripe.com/)
+
+🌐 [Live Demo](https://antonio-modern-times.vercel.app/)
+
+![screenshot](/public/images/modern-times-homepage-screenshot.png)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running follow these simple example steps.
 
-```bash
-npm run dev
-# or
-yarn dev
+### Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- Have installed the latest stable version of [node.js](https://nodejs.org/en/)
+- Sign up for a [Sanity account](https://www.sanity.io/), create your dataset, and obtain your `Sanity Token`, `Project ID`, and `Dataset`.
+- Sign up for a [Stripe account](https://stripe.com/) and obtain your `Publishable Key` and `Secret Key`.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Installation
+
+Clone repository
+
+```
+git clone https://github.com/antonio-lopez/nextjs-drinks-ecommerce.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+cd nextjs-drinks-ecommerce
+npm install
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+cd modern-times
+npm install
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Create a `.env` file in the root of your project and fill in these environment variables with your custom keys.
 
-## Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
+NEXT_PUBLIC_SANITY_TOKEN=
+NEXT_PUBLIC_SANITY_PROJECT_ID=
+NEXT_PUBLIC_SANITY_DATASET=
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+NEXT_PUBLIC_STRIPE_SECRET_KEY=
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+cd nextjs-drinks-ecommerce
+npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Acknowledgments
+
+- Sanity Query Cheat Sheet
+  - [Link](https://www.sanity.io/docs/query-cheat-sheet)
+- Modern Times blogs and pictures taken from website
+  - [link](http://www.moderntimesbeer.com/)
+- Image Extractor to batch extract images
+  - [link](https://extract.pics/)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Author
+
+👤 **Antonio Lopez**
+
+- Website: [Antonio Lopez](https://www.antoniolopez.me/)
+- Github: [@antonio-lopez](https://github.com/antonio-lopez)
+
+<p align="right">(<a href="#top">back to top</a>)</p>

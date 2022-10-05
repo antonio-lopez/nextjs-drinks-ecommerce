@@ -10,13 +10,13 @@ const Hero = () => {
         </h1>
         <div className="lg:col-start-2 lg:row-start-2">
           <p className="mb-10 text-sm sm:text-lg">
-            It that began as a 30bbl production brewery and tasting room in the
-            Point Loma neighborhood of San Diego in 2013. Today, we&apos;re
-            distributed throughout California, Arizona, Colorado, Nevada, Utah,
-            Hawaii, and Texas. Since its inception, the Modern Times multiverse
-            has expanded to include a robust and ever-growing barrel program,
-            killer satellite brewery & tasting room locations, and restaurants
-            in Anaheim and Encinitas.
+            It began as a 30BBL (beer barrels) production brewery and tasting
+            room in the Point Loma neighborhood of San Diego in 2013. Today,
+            we&apos;re distributed throughout California, Arizona, Colorado,
+            Nevada, Utah, Hawaii, and Texas. Since its inception, the Modern
+            Times multiverse has expanded to include a robust and ever-growing
+            barrel program, killer satellite brewery & tasting room locations,
+            and restaurants in Anaheim and Encinitas.
           </p>
           <Link href="/about" passHref>
             <a
