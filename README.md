@@ -40,6 +40,8 @@ A challenge to myself to redesign my favorite brewery's online store, [Modern Ti
 
 🌐 [Live Demo](https://antonio-modern-times.vercel.app/)
 
+🎨 [Figma Design](https://www.figma.com/file/5cgK92ArBLNg6rMp1vcDg7/Coffee-Shop)
+
 ![screenshot](/public/images/modern-times-homepage-screenshot.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
